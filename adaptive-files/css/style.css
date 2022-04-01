@@ -210,11 +210,27 @@ a {
 
 .oliva__item {}
 
-.item {}
+.item {
+    background-image: url(img/Bg.png) no-repeat;
+}
+
+.item__down::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    z-index: 9;
+    position: absolute;
+    left: 48%;
+}
 
 .item__uper {
     padding: 0 64px 0 64px;
 }
+
+.item__uper-content {}
 
 .item__title-img {
     text-align: center;
@@ -231,10 +247,22 @@ a {
     color: rgb(132, 135, 137);
     line-height: 30px;
     text-align: justify;
-    margin: 0 0 83px 0;
+
 }
 
-.item__down {}
+.item__text::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #d7d7d7;
+    margin: 28px auto 54px;
+
+}
+
+.item__down {
+    position: relative;
+}
 
 /*boriosa*/
 
@@ -243,7 +271,7 @@ a {
 .boriosa__container {
     height: 100%;
     max-height: 600px;
-    padding: 0;
+    padding: 10px 0;
 }
 
 .boriosa__row {
@@ -259,6 +287,7 @@ a {
 .boriosa__bigimg {
     display: flex;
     flex: 1 1 auto;
+    top: 5px;
 }
 
 .boriosa__logo {
@@ -295,7 +324,7 @@ a {
     color: rgb(132, 135, 137);
     line-height: 30px;
     text-align: justify;
-    margin: 0 0 83px 0;
+    margin: 0;
 }
 
 .item__down {}
