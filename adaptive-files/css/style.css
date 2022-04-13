@@ -97,6 +97,44 @@ body {
     margin: 0 auto;
 }
 
+.wraper {
+    min-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+@media (max-width:1600px) {
+    .content {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width:1200px) {
+    .content {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:970px) {
+    .content {
+        max-width: 750px;
+    }
+}
+
+@media (max-width:767px) {
+    .content {
+        max-width: none;
+    }
+}
+
 a {
     color: #6e6b79;
 }
@@ -121,6 +159,7 @@ a {
 /*Header*/
 .header {
     height: 100%;
+    width: 100%;
     max-width: 1600px;
     min-height: 800px;
     background: url(../img/image1.png) no-repeat;
